@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio de Desarrollador</title>
+
+  <!-- Tailwind CSS vía CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Configuración de Tailwind -->
+  <script src="static/js/tailwind.config.js"></script>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+  <div class="relative w-full flex flex-col">
+    <!-- TopNavBar -->
+    <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 bg-background-dark/80 backdrop-blur-sm px-4 md:px-10 py-3" id="inicio">
+      <div class="flex items-center gap-4 text-white">
+        <div class="size-6 text-primary">
+          <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+          </svg>
+        </div>
+        <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Joyce-z </h2>
+      </div>
+      <nav class="hidden md:flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+          <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#inicio">Inicio</a>
+          <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#sobre-mi">Sobre Mí</a>
+          <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#servicios">Servicios</a>
+          <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#proyectos">Proyectos</a>
+          <a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#contacto">Contacto</a>
+        </div>
+        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#111814] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-opacity">
+          <span class="truncate">Comprar Ahora</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="flex flex-col items-center w-full px-4 md:px-10 py-10">
+      <div class="layout-content-container flex flex-col max-w-[960px] flex-1 gap-16 md:gap-24">
+        <!-- HeroSection -->
+        <section class="flex flex-col-reverse md:flex-row gap-8 items-center py-10">
+          <div class="flex flex-col gap-6 text-center md:text-left flex-1">
+            <div class="flex flex-col gap-2">
+              <h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Desarrollador Full Stack Creando Soluciones Digitales</h1>
+              <h2 class="text-gray-300 text-base md:text-lg font-normal leading-normal">Especializado en <span class="text-primary font-bold">Web Apps</span>, <span class="text-primary font-bold">Mobile</span>, y <span class="text-primary font-bold">UI/UX</span> para llevar tus ideas al siguiente nivel.</h2>
+            </div>
+            <div class="flex-wrap gap-3 flex justify-center md:justify-start">
+              <a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 md:h-12 md:px-5 bg-primary text-[#111814] text-sm md:text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-opacity" href="#proyectos">
+                <span class="truncate">Ver Proyectos</span>
+              </a>
+              <a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 md:h-12 md:px-5 bg-primary/20 text-white text-sm md:text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors" href="#contacto">
+                <span class="truncate">Contactar</span>
+              </a>
+            </div>
+          </div>
+          <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-center bg-no-repeat bg-cover flex-shrink-0" data-alt="Professional portrait of a developer" style='background-image: url("static/img/perfil.jpg");'></div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="flex flex-col gap-6" id="sobre-mi">
+          <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4">Sobre Mí</h2>
+          <p class="text-gray-300 text-base font-normal leading-normal px-4">Soy un estudiante de la carrera de Arquitectutra de Plataformas y Servicios de Tecnologias de Informacion desarrollador apasionado con experiencia en la creación de soluciones web eficientes y escalables. Mi enfoque está en escribir código limpio, mantener una comunicación directa y entregar resultados medibles que impulsen el éxito del cliente.</p>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-4">
+            <div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-square transition-transform duration-300 hover:scale-105" data-alt="Thumbnail for a project called Demo Proyecto Uno" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd915OQob7GyveG3uJ--ZCjvGKjw079uSQrtr3tafUN6Wa357TA3vmJudn30Hf8irWxO0Hg3_HtykjiUaBTItVcFjdggAWzy7EewOHn0Z4HE2ncEIN1vXpRaqyynG73xRzgHTQDkIqjxNtJ00KM8Y_rCryIrrVzGXmHhIQJbAqsUmlsUf5sEop_2ZaDK3eNwQy6PMPy-E2U9ZaEsB7D7mrUVIFJQTqG-hD6U3vZodnWBrLbc6NjpUEtfahcI5uScmDp7eHxJbN6tg");'>
+              <p class="text-white text-base font-bold leading-tight">Demo Proyecto Uno</p>
+            </div>
+            <div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-square transition-transform duration-300 hover:scale-105" data-alt="Thumbnail for a project called Demo Proyecto Dos" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwqB2mCQ0EFAFdG2j89rkQrAZWlJsQ-6GNFwp4V6cCfKfP-UqcggDMhgn2oFkyKiRx_xSrs2g-VEaUILy9Scxa13WxtR2uySs6ChdSPzKIE3XufhHAZ7YjLQtPC--ZzntBdxwFBnAQIqoWc02-gDefio7MeXZ4_dYloZB82rftw-k8PFIhigcHjzn9uvLaMvCrcCAFp3E9DIB5oqO8ZIC5t_JJjHFk8yYGpY8Tf4tQdQpvDg_QqW6Ap45cdTjzWqS-dkMKZj8X3_w");'>
+              <p class="text-white text-base font-bold leading-tight">Demo Proyecto Dos</p>
+            </div>
+            <div class="bg-cover bg-center flex flex-col gap-3 rounded-lg justify-end p-4 aspect-square transition-transform duration-300 hover:scale-105" data-alt="Thumbnail for a project called Demo Proyecto Tres" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7jwTCbNFpcDWiBidwvMgQ2QitIduB_Q0rvXH_Ay9dOI07h0Ih8M4VwuGT6yPFf7QsVfLNEw_3rqIOBcQ-gHQsjD9VUF69TL-w0uDoxpXLpGoA2JlZvBdpcUs03FBQw18xmxAT5vFGye7SSl_Gc4-f0-DXvexWVu05qN5AeV7l47u_Nt5xpAMsJE2CV9VnxXbY3BPB2YDzQHU1a928KTiR73E0Aw-IPGP0PKkFj8YEn_3MyjeZ7SKZjFrzLbBCl_52mCbLwWZseUs");'>
+              <p class="text-white text-base font-bold leading-tight">Demo Proyecto Tres</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="flex flex-col gap-8" id="servicios">
+          <div class="flex flex-col gap-2 px-4">
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Servicios</h2>
+            <p class="text-gray-300 text-base font-normal leading-normal">Ofrezco una gama completa de servicios para potenciar tu presencia digital.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+            <div class="flex flex-col gap-3 p-6 bg-primary/10 rounded-xl border border-primary/20 transition-all hover:border-primary/50 hover:bg-primary/20">
+              <span class="material-symbols-outlined text-primary text-4xl">code</span>
+              <h3 class="text-white text-lg font-bold">Desarrollo Web</h3>
+              <p class="text-gray-300 text-sm">Creación de sitios y aplicaciones web a medida, responsivos y de alto rendimiento.</p>
+            </div>
+            <div class="flex flex-col gap-3 p-6 bg-primary/10 rounded-xl border border-primary/20 transition-all hover:border-primary/50 hover:bg-primary/20">
+              <span class="material-symbols-outlined text-primary text-4xl">design_services</span>
+              <h3 class="text-white text-lg font-bold">Diseño UI/UX</h3>
+              <p class="text-gray-300 text-sm">Interfaces intuitivas y atractivas centradas en la experiencia del usuario.</p>
+            </div>
+            <div class="flex flex-col gap-3 p-6 bg-primary/10 rounded-xl border border-primary/20 transition-all hover:border-primary/50 hover:bg-primary/20">
+              <span class="material-symbols-outlined text-primary text-4xl">monitoring</span>
+              <h3 class="text-white text-lg font-bold">Optimización SEO</h3>
+              <p class="text-gray-300 text-sm">Mejora de la visibilidad en motores de búsqueda para atraer más tráfico orgánico.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 px-4 pt-8">
+            <h3 class="text-white text-xl font-bold">Por Qué Elegirnos</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+            <div class="flex flex-col items-center text-center gap-3 p-4">
+              <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+              <h4 class="text-white font-bold">Código Limpio</h4>
+              <p class="text-gray-400 text-sm">Soluciones mantenibles y escalables que siguen las mejores prácticas.</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-3 p-4">
+              <span class="material-symbols-outlined text-primary text-3xl">forum</span>
+              <h4 class="text-white font-bold">Comunicación Directa</h4>
+              <p class="text-gray-400 text-sm">Transparencia y colaboración constante para asegurar el éxito del proyecto.</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-3 p-4">
+              <span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+              <h4 class="text-white font-bold">Resultados Medibles</h4>
+              <p class="text-gray-400 text-sm">Enfoque en métricas clave para entregar un valor tangible y demostrable.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects / Testimonials Section -->
+        <section class="flex flex-col gap-8" id="proyectos">
+          <div class="flex flex-col gap-2 px-4">
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Proyectos y Testimonios</h2>
+            <p class="text-gray-300 text-base font-normal leading-normal">Clientes satisfechos y proyectos que hablan por sí mismos.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+            <div class="flex flex-col gap-4 p-6 bg-primary/10 rounded-xl border border-primary/20">
+              <div class="flex items-center gap-4">
+                <img class="w-12 h-12 rounded-full object-cover" data-alt="Client photo for a testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZY6GzDZRxQlX6TFuJixm32dYK9W3GnAOnTt_zFNwwzehR74-SsI7PZOBvpsGbDXRUHHqUOqnz3W6jpsrSyxGRI6xl_wcDdyj3EkwziukZME2v-J9_rMYtgR-LrPrxfncc8-7LcmzhxuUm40Yh8PuIhccUfdJtgOP4mpWL7_ND1ksXOHun7i3sAo3lovQLY1TZx7dtLXwSePDzRduEujiInQS6uTzy4LecWsToEFWaHWUW9nF_iHMzzr_a1lt9b_-xFZLlplv0zZg" />
+                <div>
+                  <h4 class="text-white font-bold">Cliente Uno</h4>
+                  <p class="text-gray-400 text-sm">CEO de TechCorp</p>
+                </div>
+              </div>
+              <p class="text-gray-300 italic">"Un trabajo excepcional. La atención al detalle y la profesionalidad superaron nuestras expectativas. ¡Muy recomendable!"</p>
+            </div>
+            <div class="flex flex-col gap-4 p-6 bg-primary/10 rounded-xl border border-primary/20">
+              <div class="flex items-center gap-4">
+                <img class="w-12 h-12 rounded-full object-cover" data-alt="Client photo for another testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTelno2yWfx-Zvzd54WHFBgvhZIirDyWW8KkIBsOkV_kkAT8IjISDkZQzpX50OA-sGGqFcsn9pcW10MOY34GH4p3ygky3IRsPYAz9SSIxsGUUtTQglHUSYvNaFNHSmtyFwH53DxlKl4NCKSCKC50Fz0NQRhrcUq6-bPuQuR18wTcNBvC5Z2uXWHn_uBtJqyFc5eki1juJ5vQldUy9Co_D8J9QqxycPlEfGmQ-HrDHnOaVj2eueN-3ChSra2G3X2x0IoE3rM8573Pc" />
+                <div>
+                  <h4 class="text-white font-bold">Cliente Dos</h4>
+                  <p class="text-gray-400 text-sm">Fundadora de Innovate</p>
+                </div>
+              </div>
+              <p class="text-gray-300 italic">"El proceso fue fluido y el resultado final fue exactamente lo que necesitábamos para crecer. Un verdadero profesional."</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="flex flex-col md:flex-row gap-12" id="contacto">
+          <div class="flex-1 flex flex-col gap-6">
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Contacto</h2>
+            <p class="text-gray-300">¿Tienes un proyecto en mente? Hablemos. Estoy disponible para colaboraciones y nuevas oportunidades.</p>
+            <form class="flex flex-col gap-4">
+              <input class="w-full bg-primary/10 border border-primary/20 rounded-lg p-3 text-white placeholder-gray-400 focus:ring-primary focus:border-primary" placeholder="Tu Nombre" type="text" />
+              <input class="w-full bg-primary/10 border border-primary/20 rounded-lg p-3 text-white placeholder-gray-400 focus:ring-primary focus:border-primary" placeholder="Tu Email" type="email" />
+              <textarea class="w-full bg-primary/10 border border-primary/20 rounded-lg p-3 text-white placeholder-gray-400 focus:ring-primary focus:border-primary" placeholder="Tu Mensaje" rows="4"></textarea>
+              <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-[#111814] text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-opacity" type="submit">
+                <span class="truncate">Enviar Mensaje</span>
+              </button>
+            </form>
+          </div>
+          <div class="flex-1 flex flex-col gap-6">
+            <h3 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Características y Herramientas</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <span class="material-symbols-outlined text-primary">gite</span>
+                <span class="text-white">Git</span>
+              </div>
+              <div class="flex items-center gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <span class="material-symbols-outlined text-primary">terminal</span>
+                <span class="text-white">Docker</span>
+              </div>
+              <div class="flex items-center gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <span class="material-symbols-outlined text-primary">api</span>
+                <span class="text-white">APIs REST</span>
+              </div>
+              <div class="flex items-center gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <span class="material-symbols-outlined text-primary">database</span>
+                <span class="text-white">SQL/NoSQL</span>
+              </div>
+              <div class="flex items-center gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <span class="material-symbols-outlined text-primary">cloud</span>
+                <span class="text-white">Cloud Hosting</span>
+              </div>
+              <div class="flex items-center gap-3 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <span class="material-symbols-outlined text-primary">design_services</span>
+                <span class="text-white">Figma</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-primary/20 mt-16 md:mt-24">
+      <div class="max-w-[960px] mx-auto flex flex-col md:flex-row items-center justify-between p-6 gap-4">
+        <p class="text-sm text-gray-400 text-center md:text-left">© 2024 Juan. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a aria-label="GitHub Profile" class="text-gray-400 hover:text-primary transition-colors" href="#">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </a>
+          <a aria-label="LinkedIn Profile" class="text-gray-400 hover:text-primary transition-colors" href="#">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect height="12" width="4" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a aria-label="Twitter Profile" class="text-gray-400 hover:text-primary transition-colors" href="#">
+            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.9 3.3 4.9s-1.4-.6-2.8-.9c-1.2 2.2-2.8 4.3-5.2 4.3s-5.5-2.1-5.5-6.1c0-4.4 3.7-9.1 11.8-9.1s-2.8 3.7-2.8 3.7s-1.2-1.2-2.8-1.2s-2.8 1.2-2.8 1.2s-1.2-1.2-2.8-1.2s-2.8 1.2-2.8 1.2s-1.2-1.2-2.8-1.2s-2.8 1.2-2.8 1.2"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
